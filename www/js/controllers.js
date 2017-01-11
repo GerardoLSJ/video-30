@@ -9,7 +9,10 @@ angular.module('starter.controllers', [])
     $cordovaCapture.captureVideo(options).then(function(videoData) {
       // Success! Video data is here
       //mediaFiles[i].fullPath;
-      console.log(videoData.fullPath)
+      console.log(JSON.stringify(videoData[0].fullPath));
+      console.log(JSON.stringify(videoData[0].type));
+      console.log(JSON.stringify(videoData[0].size));
+      
     }, function(err) {
       console.log(err)
     });
